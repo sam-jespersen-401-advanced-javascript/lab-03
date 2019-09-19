@@ -6,7 +6,10 @@ jest.mock('../lib/files.js', () => ({
 
 // for setting up mock expectations
 const { readFile, writeFile, readdir } = require('../lib/files');
+const { DocumentCollection } = require('../lib/document-collection');
+const folder = './fake/path';
+const docs = new DocumentCollection(folder)
 
 describe('Document Collection', () => {
-  // TODO
+
 });
