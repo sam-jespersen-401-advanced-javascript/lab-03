@@ -12,7 +12,7 @@ const objectToSave = {
 
 documents.save(objectToSave);
 
-documents.get('L-PFu3AA')
+documents.get('DruVNWKP')
   .then(res => {
     console.log(res);
   });
