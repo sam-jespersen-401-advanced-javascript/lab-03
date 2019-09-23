@@ -1,23 +1,34 @@
-const { DocumentCollection } = require('./lib/document-collection');
+const db = require('./lib/database');
+const dbPath = './db';
+db.connect(dbPath);
 
-const path = './test';
-const documents = new DocumentCollection(path);
+const animalModel = require('./models/models');
 
-// write some code to exercise your document collection
-
-const objectToSave = {
-  text: 'value',
-  read: true
+const model1 = {
+  name: 'Bessy',
+  type: 'cow',
+  large: true,
+  eyes: 2
 };
 
-documents.save(objectToSave);
+const model2 = {
+  name: 'Hortence',
+  type: 'spider',
+  large: false,
+  eyes: 8
+};
 
-documents.get('DruVNWKP')
+animalModel.create(model1);
+animalModel.create(model2);
+
+animalModel.find()
   .then(res => {
     console.log(res);
   });
 
-documents.getAll()
+animalModel.findById('laTCL7iu')
   .then(res => {
-    console.log('ALL', res);
+    console.log(res);
   });
+
+db.close();

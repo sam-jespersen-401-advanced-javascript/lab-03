@@ -1,4 +1,4 @@
-const SchemaValidator = require('../lib/Schema');
+const SchemaValidator = require('../lib/schema');
 const { ModelError } = require('../lib/Errors');
 
 describe('Schema', () => {
