@@ -28,6 +28,7 @@
     "shortid": "^2.2.15"
   },
   "devDependencies": {
+    "mkdirp": "^0.5.1",
     "jest": "^24.9.0"
   }
 }
